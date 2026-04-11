@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ardhana Fajrul Falah | Global Portfolio</title>
+
+<meta name="description" content="Finance Leader driving global growth and strategy.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --bg:#020617;
+  --text:#e2e8f0;
+  --glass:rgba(255,255,255,0.05);
+}
+.light{
+  --bg:#f8fafc;
+  --text:#020617;
+  --glass:rgba(255,255,255,0.8);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  cursor:none;
+}
+
+/* CURSOR */
+.cursor,.cursor2{
+  position:fixed;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:9999;
+}
+.cursor{width:20px;height:20px;border:2px solid #38bdf8;}
+.cursor2{width:8px;height:8px;background:#22c55e;}
+
+/* PROGRESS BAR */
+.progress-bar{
+  position:fixed;
+  top:0;left:0;height:4px;
+  background:#38bdf8;width:0%;z-index:9999;
+}
+
+/* PARALLAX */
+.parallax{
+  position:fixed;width:100%;height:100%;
+  background:radial-gradient(circle,#38bdf8,transparent),
+             radial-gradient(circle,#22c55e,transparent);
+  opacity:0.15;z-index:-3;
+}
+
+/* HERO */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+}
+.bg-video{
+  position:absolute;width:100%;height:100%;
+  object-fit:cover;z-index:-2;
+}
+.overlay{
+  position:absolute;width:100%;height:100%;
+  background:rgba(0,0,0,0.6);z-index:-1;
+}
+
+.hero img{
+  width:150px;height:150px;border-radius:50%;
+  border:3px solid #38bdf8;
+}
+.hero h1{
+  font-size:48px;
+  background:linear-gradient(to right,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* BUTTON */
+.btn{
+  margin:10px;padding:12px 25px;border-radius:30px;
+  background:linear-gradient(135deg,#38bdf8,#22c55e);
+  color:#020617;text-decoration:none;font-weight:600;
+}
+
+/* CARD */
+.card{
+  position:relative;
+  background:var(--glass);
+  backdrop-filter:blur(15px);
+  border-radius:20px;
+  padding:25px;
+  margin:20px;
+  transform-style:preserve-3d;
+
+  opacity:0;
+  transform:translateY(80px) scale(0.95);
+  transition:all 0.8s cubic-bezier(.17,.67,.38,1.3);
+}
+.card.show{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+}
+
+/* CLICKABLE */
+.clickable{cursor:pointer}
+
+/* EXPAND CONTENT */
+.hidden-content{
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:all 0.5s ease;
+  margin-top:10px;
+}
+.card.active .hidden-content{
+  max-height:600px;
+  opacity:1;
+}
+
+/* GLOW */
+.glow{
+  position:absolute;width:200px;height:200px;
+  background:radial-gradient(circle,#38bdf8,transparent);
+  opacity:0;
+}
+
+/* CONTAINER */
+.container{max-width:1100px;margin:auto}
+
+/* CONTACT */
+#contact i{margin-right:10px;color:#38bdf8}
+#contact a{
+  color:var(--text);
+  text-decoration:none;
+  transition:0.3s;
+}
+#contact a:hover{
+  color:#38bdf8;
+  margin-left:5px;
+}
+
+/* FLOAT */
+.floating-btn{
+  position:fixed;
+  bottom:20px;right:20px;
+  background:#22c55e;
+  padding:15px;border-radius:50px;color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="cursor"></div>
+<div class="cursor2"></div>
+
+<div class="progress-bar" id="progressBar"></div>
+<div class="parallax" id="parallax"></div>
+
+<header class="hero">
+  <video autoplay muted loop class="bg-video">
+    <source src="bg.mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <img src="foto.jpg">
+  <h1>Driving Profitability, Global Financial Growth & World Trade</h1>
+
+  <div>
+    <a href="#contact" class="btn">Hire Me</a>
+    <a href="cv-ardhana.pdf" class="btn">Download CV</a>
+    <a href="https://www.linkedin.com/in/ardhana-fajrul-falah-2395b8235/" class="btn">LinkedIn</a>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="card clickable">
+<h2>About</h2>
+<p>Finance leader specializing in global strategy & cost optimization.</p>
+
+<div class="hidden-content">
+<p>
+I am a young professional aged 26 years with the ambition to continue to develop and
+progress, I became a Manager in several companies at a young age because my ability
+to be able to learn things quite easily has become my capital to continue to develop and
+have a professional career.
+</p>
+</div>
+</div>
+
+<div class="card clickable">
+<h2>Experience</h2>
+<p>Finance Manager • Export Import • Operations</p>
+
+<div class="hidden-content">
+
+<h3>Operational</h3>
+<p>
+Manage important company documents to be able to make company profits, and also
+organize staff to be able to contribute more to the company
+</p>
+
+<h3>Finance Manager</h3>
+<p>
+Manage all documents regarding company finances, taxes and income, and also calculate
+the budget for company income, manage company finances
+</p>
+
+<h3>Export Import Manager</h3>
+<p>
+Managing domestic and foreign Customs documents, ensuring goods arrive safely in the
+destination country, processing sales documents and receiving goods
+</p>
+
+</div>
+</div>
+
+<div class="card">
+<h2>Case Study</h2>
+<p>Reduced cost by 20% and improved efficiency.</p>
+</div>
+
+<div id="contact" class="card">
+<h2>📞 Contact</h2>
+
+<p><i class="fas fa-envelope"></i>
+<a href="mailto:ardhanaffalah@gmail.com">ardhanaffalah@gmail.com</a></p>
+
+<p><i class="fab fa-linkedin"></i>
+<a href="https://www.linkedin.com/in/ardhana-fajrul-falah-2395b8235/" target="_blank">
+LinkedIn</a></p>
+
+<p><i class="fab fa-instagram"></i>
+<a href="https://www.instagram.com/ardhanffa/" target="_blank">
+Instagram</a></p>
+
+<p><i class="fab fa-whatsapp"></i>
+<a href="https://wa.me/628213194886" target="_blank">
+WhatsApp</a></p>
+
+</div>
+
+</div>
+
+<a href="https://wa.me/628213194886" class="floating-btn">💬</a>
+
+<script>
+// CLICK EXPAND
+document.querySelectorAll(".clickable").forEach(card=>{
+  card.addEventListener("click",()=>{
+    card.classList.toggle("active");
+  });
+});
+
+// CURSOR
+const c1=document.querySelector(".cursor");
+const c2=document.querySelector(".cursor2");
+document.addEventListener("mousemove",e=>{
+  c1.style.left=e.clientX+"px";
+  c1.style.top=e.clientY+"px";
+  c2.style.left=e.clientX+"px";
+  c2.style.top=e.clientY+"px";
+});
+
+// SCROLL
+const cards=document.querySelectorAll(".card");
+window.addEventListener("scroll",()=>{
+  cards.forEach((card,i)=>{
+    const rect=card.getBoundingClientRect();
+    if(rect.top<window.innerHeight-100){
+      card.classList.add("show");
+    }
+  });
+});
+
+// PROGRESS
+window.addEventListener("scroll",()=>{
+  let s=document.documentElement.scrollTop;
+  let h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById("progressBar").style.width=(s/h)*100+"%";
+});
+
+// PARALLAX
+window.addEventListener("scroll",()=>{
+  document.getElementById("parallax").style.transform=
+  "translateY("+window.scrollY*0.3+"px)";
+});
+
+// 3D EFFECT
+document.querySelectorAll(".card").forEach(card=>{
+  const glow=document.createElement("div");
+  glow.classList.add("glow");
+  card.appendChild(glow);
+
+  card.addEventListener("mousemove",e=>{
+    const rect=card.getBoundingClientRect();
+    let x=e.clientX-rect.left;
+    let y=e.clientY-rect.top;
+
+    card.style.transform=
+    `rotateX(${-(y-rect.height/2)/10}deg) rotateY(${(x-rect.width/2)/10}deg)`;
+
+    glow.style.left=x+"px";
+    glow.style.top=y+"px";
+    glow.style.opacity=0.4;
+  });
+
+  card.addEventListener("mouseleave",()=>{
+    card.style.transform="rotateX(0) rotateY(0)";
+    glow.style.opacity=0;
+  });
+});
+</script>
+
+</body>
+</html>
