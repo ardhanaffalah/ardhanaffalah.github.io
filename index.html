@@ -34,7 +34,7 @@ body{
   border-radius:50%;
   pointer-events:none;
   transform:translate(-50%,-50%);
-  transition:0.15s ease-out;
+  transition:0.15s;
   z-index:9999;
 }
 .cursor-dot{
@@ -145,8 +145,15 @@ form input:focus, form textarea:focus{
 
 /* CONTACT */
 #contact i{margin-right:10px;color:#38bdf8;}
-#contact a{color:var(--text);text-decoration:none;}
-#contact a:hover{color:#38bdf8;}
+#contact a{
+  color:var(--text);
+  text-decoration:none;
+  transition:0.3s;
+}
+#contact a:hover{
+  color:#22c55e;
+  margin-left:5px;
+}
 
 .floating-btn{
   position:fixed;
@@ -238,8 +245,22 @@ form input:focus, form textarea:focus{
 <!-- CONTACT -->
 <div id="contact" class="card">
 <h2>📞 Contact</h2>
-<p><i class="fas fa-envelope"></i> aradhanaffalah@gmail.com</p>
-<p><i class="fab fa-whatsapp"></i> WhatsApp Available</p>
+
+<p><i class="fas fa-envelope"></i>
+<a href="mailto:ardhanaffalah@gmail.com">ardhanaffalah@gmail.com</a></p>
+
+<p><i class="fab fa-whatsapp"></i>
+<a href="https://wa.me/628213194886" target="_blank">
++62 821-3194-8886</a></p>
+
+<p><i class="fab fa-linkedin"></i>
+<a href="https://www.linkedin.com/in/ardhana-fajrul-falah-2395b8235/" target="_blank">
+LinkedIn Profile</a></p>
+
+<p><i class="fab fa-instagram"></i>
+<a href="https://www.instagram.com/ardhanffa/" target="_blank">
+Instagram Profile</a></p>
+
 </div>
 
 </div>
@@ -258,7 +279,6 @@ document.addEventListener("mousemove", (e) => {
   dot.style.top = e.clientY + "px";
 });
 
-// HOVER EFFECT
 document.querySelectorAll("a, button").forEach(el=>{
   el.addEventListener("mouseenter",()=>{
     cursor.style.transform="translate(-50%,-50%) scale(1.6)";
@@ -278,6 +298,7 @@ function orderProduct(product){
 // FORM WA
 function sendHiringForm(e){
   e.preventDefault();
+
   let text = `
 Company: ${companyName.value}
 Position: ${position.value}
@@ -285,10 +306,11 @@ Contact: ${contactPerson.value}
 Email: ${email.value}
 Phone: ${phone.value}
 Message: ${message.value}`;
+
   window.open(`https://wa.me/628213194886?text=${encodeURIComponent(text)}`);
 }
 
-// SCROLL ANIMATION
+// SCROLL
 window.addEventListener("scroll",()=>{
   document.querySelectorAll(".card").forEach(c=>{
     if(c.getBoundingClientRect().top < window.innerHeight-100){
